@@ -1,0 +1,164 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<div class="body-section">
+    <div class="content">
+        <h1>We connect people to bring projects to life</h1>
+        <button>BECOME A PARTNER</button>
+        <!--<button>ADD PROJECT</button>--> 
+    </div>
+</div>
+
+<div class="work-project-container" [class.visible]="isVisible">
+    
+    <div class="left-column">
+        <img src="assets/c.png" alt="Work Project Image" class="project-image" />
+    </div>
+
+    <div class="right-column">
+        <h1>Up your work project, it’s easy</h1>
+
+        <div class="feature" [routerLink]="['/auth']" style="cursor:pointer;">
+            <span class="icon">✏️</span>
+            <div class="text">
+                <h3>No cost to join</h3>
+                <p>Register and browse talent profiles, explore projects, or even book a consultation.</p>
+            </div>
+        </div>
+
+        <div class="feature" [routerLink]="['/postproject']" style="cursor: pointer;">
+            <span class="icon">🛠️</span>
+            <div class="text">
+                <h3>Post a job and hire top talent</h3>
+                <p>Finding talent doesn’t have to be a chore. Post a job or we can search for you!</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <span class="icon">📋</span>
+            <div class="text">
+                <h3>Work with the best</h3>
+                <p>We make it affordable to up your work and take advantage of low transaction rates.</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn primary" (click)="goToAuth()">Sign up for free</button>
+            <button class="btn secondary">Learn how to hire</button>
+        </div>
+    </div>
+</div>
+
+<div class="enterprise-section">
+    <!-- Left Side: Content with text and button -->
+    <div class="enterprise-left">
+        <p class="tagline">Enterprise Suite</p>
+        <h1 class="headline">This is how<br><span>good companies<br>find good company.</span></h1>
+        <p class="description">
+            Access the top 1% of talent with us, and a full suite of hybrid workforce
+            management tools. This is how innovation works now.
+        </p>
+
+        <ul class="features">
+            <li>🛠️ <strong>Access expert talent</strong> to fill your skill gaps</li>
+            <li>💼 <strong>Control your workflow</strong>: hire, classify and pay your talent</li>
+            <li>🎧 <strong>Contact freely</strong> with your client/worker</li>
+        </ul>
+
+        <button class="learn-more-btn">learn more</button>
+    </div>
+
+    <!-- Right Side: Image (m.png) -->
+    <div class="enterprise-right">
+        <img src="assets/m.png" alt="Image">
+    </div>
+</div>
+
+
+<!-- Browse Talent by Category Section -->
+<section id="categories" style="background-color: #f9f9f9; padding: 60px 20px;">
+    <div class="container">
+      <h2>Browse Talent by Category</h2>
+      <p>Looking for work? <a href="#">Browse jobs</a></p>
+  
+      <div class="category-grid">
+        <div class="category-card" (click)="goToBuilding()" style="cursor: pointer;">
+            <i class="fas fa-hard-hat fa-2x"></i>
+                <h3>Building and Construction</h3>
+                <div class="rating"><span class="star">★</span> 4.8/5</div>
+                <div class="skills">1502 skills</div>
+        </div>
+        <!--<div class="stat-box" (click)="goToPlumber()" style="cursor: pointer;"></div>-->
+        <div class="category-card" (click)="goToPlumber()" style="cursor: pointer;">
+            <i class="fas fa-wrench fa-2x"></i>
+                <h3>Plumber</h3>
+                <div class="rating"><span class="star">★</span> 4.9/5</div>
+                <div class="skills">1800 skills</div>
+        </div>
+        <div class="category-card" (click)="goToCarpenter()" style="cursor: pointer;">
+            <i class="fas fa-hammer fa-2x"></i>
+                <h3>Carpenter</h3>
+                <div class="rating"><span class="star">★</span> 4.7/5</div>
+                <div class="skills">1250 skills</div>
+        </div>
+        <div class="category-card" (click)="goToPainter()" style="cursor: pointer;">
+            <i class="fas fa-paint-roller fa-2x"></i>
+                <h3>Painter</h3>
+                <div class="rating"><span class="star">★</span> 4.6/5</div>
+                <div class="skills">980 skills</div>
+        </div>
+        <div class="category-card" (click)="goToTilier()" style="cursor: pointer;">
+            <i class="fas fa-th-large fa-2x"></i>
+                <h3>Tiler</h3>
+                <div class="rating"><span class="star">★</span> 4.8/5</div>
+                <div class="skills">1130 skills</div>
+        </div>
+        <div class="category-card" (click)="goToElectrician()" style="cursor: pointer;">
+            <i class="fas fa-bolt fa-2x"></i> <!-- lightning bolt icon for electrician -->
+            <h3>Electrician</h3>
+            <div class="rating"><span class="star">★</span> 4.7/5</div>
+            <div class="skills">1100 skills</div>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="how-it-works">
+  <h2>How it works!</h2>
+  <div class="steps">
+    <!-- Step 1 -->
+    <div class="step">
+      <div class="number">1</div>
+      <img src="assets/to.webp" alt="Step 1">
+      <h3>Find your pro / service</h3>
+      <p>Service providers and professionals with top ratings & closest to your location.</p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step">
+      <div class="number">2</div>
+      <img src="assets/ttt.jpg" alt="Step 2">
+      <h3>Contact & book</h3>
+      <p>Call directly or use the built-in chat to provide more details about your need.</p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step">
+      <div class="number">3</div>
+      <img src="assets/TO.jpg" alt="Step 3">
+      <h3>All set!</h3>
+      <p>Happy with the service? Help the next client make the right choice.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="why-us" class="why-us-section">
+    <h2>Why Choose Us?</h2>
+    <p>
+        At our company, we prioritize quality, reliability, and customer satisfaction above all. With a dedicated team of professionals and a passion for innovation, we strive to provide solutions that truly make a difference. Whether you're looking for cutting-edge technology, exceptional service, or a partner who genuinely cares about your success — you've come to the right place. Join the growing number of satisfied clients who trust us to deliver excellence every step of the way.
+    </p>
+  </section>
+  

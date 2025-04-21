@@ -1,0 +1,36 @@
+<div class="main-container">
+  <div class="outer-container">
+  <div class="container">
+
+    <!-- Login Form -->
+    <div *ngIf="isLogin" class="form-container sign-in-container">
+      <form>
+        <img src="/assets/oo.png" alt="Logo" class="logo" />
+        <h1><span class="log">LOG</span> <span class="in">IN</span></h1>
+        <input type="email" placeholder="E-MAIL" />
+        <input type="password" placeholder="PASSWORD" />
+        <a href="#">FORGOT PASSWORD ?</a>
+        <button type="button">LOG IN</button>
+        <p>NEW USER ? <span class="signup" (click)="toggleLoginMode()">SIGN UP</span></p>
+      </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div *ngIf="!isLogin" class="form-container sign-up-container">
+      <form>
+        <img src="/assets/oo.png" alt="Logo" class="logo" />
+        <h1>Create Account</h1>
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email" />
+        <input type="tel" placeholder="Phone Number" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <input type="text" placeholder="Address" />
+        <button type="button">Register</button>
+        <p>Already have an account? <span class="login" (click)="toggleLoginMode()">LOGIN</span></p>
+      </form>
+    </div>
+
+  </div>
+  </div>
+</div>

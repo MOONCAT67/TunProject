@@ -1,0 +1,102 @@
+/* Navbar style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    font-weight: bold; /* Make entire navbar text bold */
+}
+
+/* Logo style */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold; /* Bold */
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo icon style */
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Orange color for logo text */
+.orange {
+    color: orange;
+}
+
+/* Navigation links style */
+.nav-links a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold; /* Bold links */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Right section (search, profile, etc.) */
+.right-section {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Search container style */
+.search-container {
+    position: relative;
+}
+
+/* Search input style */
+.search-container input {
+    padding: 8px 30px 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Search icon style */
+.search-container .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/* Profile icon style */
+.profile {
+    font-size: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Body margin reset and font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+.clickable {
+    cursor: pointer;
+  }
+  .logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

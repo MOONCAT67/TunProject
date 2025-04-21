@@ -1,0 +1,71 @@
+<div class="form-page">
+    <!-- Success message popup -->
+    <div *ngIf="successMessageVisible" class="success-popup">
+      <h2>🎉 Congratulations!</h2>
+      <p>Your project has been successfully uploaded.</p>
+      <button (click)="successMessageVisible = false">Post Another Project</button>
+    </div>
+  
+    <!-- Form content (hidden when successMessageVisible is true) -->
+    <div class="form-container" *ngIf="!successMessageVisible">
+      <h1>Post a New Project</h1>
+      <form (ngSubmit)="onSubmit()">
+        <label>
+          Project Title:
+          <input type="text" placeholder="Project Title" [(ngModel)]="project.title" name="title" required />
+        </label>
+  
+        <label>
+          Budget (TND):
+          <input type="number" placeholder="Budget (TND)" [(ngModel)]="project.budget" name="budget" required />
+        </label>
+  
+        <label>
+          Address:
+          <input type="text" placeholder="Address" [(ngModel)]="project.address" name="address" required />
+        </label>
+  
+        <label>
+          Deadline:
+          <input type="date" [(ngModel)]="project.deadline" name="deadline" required />
+        </label>
+  
+        <label>
+          Description:
+          <textarea
+            placeholder="Describe your project"
+            [(ngModel)]="project.description"
+            name="description"
+            rows="4"
+          ></textarea>
+        </label>
+  
+        <label>
+          Search and Add Skill:
+          <input
+            type="text"
+            placeholder="Search and add skill"
+            [(ngModel)]="skillInput"
+            name="skillInput"
+            (input)="filterSkills()"
+            (keydown.enter)="addSkill($event)"
+          />
+        </label>
+  
+        <ul *ngIf="filteredSkills.length > 0" class="suggestions">
+          <li *ngFor="let skill of filteredSkills" (click)="selectSkill(skill)">
+            {{ skill }}
+          </li>
+        </ul>
+  
+        <div class="selected-skills">
+          <span *ngFor="let skill of project.skills" class="skill-tag">
+            {{ skill }} <span class="remove" (click)="removeSkill(skill)">×</span>
+          </span>
+        </div>
+  
+        <button type="submit">Post Project</button>
+      </form>
+    </div>
+  </div>
+  

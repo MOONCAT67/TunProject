@@ -1,0 +1,141 @@
+/* Apply full background image */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial Black', Gadget, sans-serif;
+  }
+  
+  .form-page {
+    height: 100vh;
+    background-image: url('/assets/trz.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Form container */
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Success popup styling */
+  .success-popup {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  /* Success button */
+  .success-popup button {
+    margin-top: 20px;
+    background-color: #d89c7e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .success-popup button:hover {
+    background-color: #c57b5a;
+  }
+  
+  /* Form elements */
+  form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5a3e36;
+    margin-bottom: 10px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ff6d25;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 16px;
+    margin-bottom: 25px;
+    outline: none;
+    resize: none;
+  }
+  
+  button[type="submit"] {
+    background-color: #ff6315;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #c57b5a;
+  }
+  
+  /* Skill Suggestions */
+  .suggestions {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    max-height: 100px;
+    overflow-y: auto;
+    border: 1px solid #d89c7e;
+    border-radius: 8px;
+    background: #fff6f0;
+  }
+  
+  .suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .suggestions li:hover {
+    background-color: #ffe0cf;
+  }
+  
+  /* Selected Skills */
+  .selected-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .skill-tag {
+    background-color: #f4d2c3;
+    color: #5a3e36;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .skill-tag .remove {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
